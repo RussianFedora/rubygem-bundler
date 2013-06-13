@@ -10,7 +10,7 @@
 Summary: Library and utilities to manage a Ruby application's gem dependencies
 Name: rubygem-%{gemname}
 Version: 1.3.5
-Release: 1%{?dist}
+Release: 2%{?dist}
 Group: Development/Languages
 License: MIT
 URL: http://gembundler.com
