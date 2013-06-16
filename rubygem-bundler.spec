@@ -10,7 +10,7 @@
 Summary: Library and utilities to manage a Ruby application's gem dependencies
 Name: rubygem-%{gemname}
 Version: 1.3.5
-Release: 2%{?dist}
+Release: 3%{?dist}
 Group: Development/Languages
 License: MIT
 URL: http://gembundler.com
@@ -23,7 +23,7 @@ BuildRequires: rubygems
 BuildRequires: rubygem(rake)
 BuildRequires: rubygem(thor) = %{thorversion}
 BuildRequires: rubygem(fakeweb) = 1.3.0
-BuildRequires: rubygem(builder) = 3.2.2
+BuildRequires: rubygem(builder) >= 3.0.0
 # Use rspec-core until rspec are not migrated to RSpec 2.x
 BuildRequires: rubygem(rspec-core)
 BuildRequires: git sudo
@@ -125,8 +125,9 @@ rm -rf %{buildroot}%{geminstdir}/tmp/
 %doc %{gemdir}/doc/%{gemname}-%{version}
 
 %changelog
-* Tue Jun 4 2013 Sergey Mihailov <sergey.mihailov@gpm.int> - 3.2.2-1
+* Tue Jun 4 2013 Sergey Mihailov <sergey.mihailov@gpm.int> - 1.3.5-3
 - Rebuilt for new version
+- down BuildRequires for builder
 
 * Tue Sep 18 2012 Sergey Mihailov <sergey.mihailov@gmail.com> - 1.0.21-1
 - Updated to Bundler 1.0.21
